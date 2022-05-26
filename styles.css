@@ -1,0 +1,83 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: Monoton;
+    font-size: 70px;
+    margin: 0.2em;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr  {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input [type=number] {
+    width: 6em;
+}
+
+
+
+/* #button, input{
+    height: 30px;
+    padding: 0 14em;
+}
+
+#colorPicker{
+    padding: 0 .4em;
+    width: 150px;
+    margin: 0 2em;
+}
+
+#color{
+    padding: 0 .25em;
+    width: 100px;
+    margin: 0 1em;
+}
+
+#pixel #sizePicker{
+    background-color: rgb(51, 49, 49);
+    border-radius: 2.5px;
+}
+
+
+
+
+.pixelCanvas{
+    --size: 4;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+    gap: 3px;
+    padding: 3px;
+}
+
+.pixelCanvas{
+    background-color: rgb(28, 28, 29);
+    width: 800px;
+    border-radius: 3px;
+} */

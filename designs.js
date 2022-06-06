@@ -1,12 +1,9 @@
-// //Select color input
-// // Select size input
-// // When size is submitted by the user, call makeGrid()
+
 let height;
 let width;
 let table;
 let canvas;
 let color;
-let mouseDown = false;
 
 window.onload = () => {
     // alert()
@@ -14,6 +11,7 @@ window.onload = () => {
     width = document.getElementById('inputWidth')
     table = document.getElementById('pixelCanvas')
     color = document.getElementById('colorPicker')
+    document.getElementById("sizePicker").addEventListener("submit", makeGrid)
 
     table.addEventListener('click', (event) => {
      const target = event.target;
@@ -22,7 +20,9 @@ window.onload = () => {
     target.style.background = color.value
     })
 }
-function makeGrid() {
+
+function makeGrid(event) {
+    event.preventDefault()
     // clear existing grid data
     table.innerHTML = "";
 
@@ -40,43 +40,3 @@ function makeGrid() {
         table.appendChild(new_row); // append new elements onto the DOM
     }
 }
-
-
-
-    
-    
-
-function colorPixel(event) {
-    // //user can color pixels in the grid (color only that precise pixel)
-    if (mouseDown)
-        event.target.style.background = color.value;
- }
-
-    while (canvas.hasChildNodes()) {
-        canvas.removeChild(canvas.children[0]);
-    }
-    //canvas.innerHTML=“”
-    function init() {
-        canvas = document.getElementById("pixelCanvas");
-        inputHeight = document.getElementById("inputHeight");
-        inputWidth = document.getElementById(" inputWidth");
-        color = document.getElementById('colorPicker');
-        document.getElementById("sizePicker").addEventListener("submit", makeGrid)
-
-        document.body.onmousedown = () => {
-            console.log('mouseDown')
-            mouseDown = true;
-        }
-        document.body.onmouseup = () => mouseDown = false;
-
-    }
-
-
-
-
-
-box.addEventListener("mouseover", function (event) {
-    event.preventDefault()
-    if (mouseDown)
-    event.target.style.background = color.value;
-})

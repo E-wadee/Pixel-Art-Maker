@@ -43,19 +43,7 @@ function makeGrid() {
 
 
 
-    for (let_row = 0; _row < inputHeight.value; _row++) {
-        let row = document.createElement("tr");
-        for (let _col = 0; _col < inputWidth.value; _col++) {
-            const box = document.createElement("td");
-            box.addEventListener("mouseover", function (event) {
-                event.preventDefault()
-                if (mouseDown)
-                    event.target.style.background = color.value;
-            })
-            row.appendChild(box)
-        }
-        canvas.appendChild(row);
-    }
+    
     
 
 function colorPixel(event) {
@@ -63,9 +51,7 @@ function colorPixel(event) {
     if (mouseDown)
         event.target.style.background = color.value;
  }
-function resetGrid() {
-    // // reset the grid to a blank state
-}
+
     while (canvas.hasChildNodes()) {
         canvas.removeChild(canvas.children[0]);
     }
@@ -85,10 +71,6 @@ function resetGrid() {
 
     }
 
-// code here caused a bug on my code
-// function makeGrid(event) {
-//     event.preventDefault()
-//     resetGrid()
 
 
 
